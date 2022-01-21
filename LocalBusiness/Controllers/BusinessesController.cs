@@ -46,5 +46,38 @@ namespace LocalBusiness.Controllers
       return CreatedAtAction(nameof(GetBusiness), new { id = business.BusinessId}, business);
     }
 
+    [HttpPut("{id}")]
+    public async Task<ActionResult<Business>> Put(Business business, int id)
+    {
+      if (id != business.BusinessId)
+      {
+        return BadRequest();
+      }
+
+      _db.Entry(business).State = EntityState.Modified;
+
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!BusinessExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+
+      return NoContent();
+    }
+
+    private bool BusinessExists(int id)
+    {
+      return _db.Businesses.Any(find => find.BusinessId == id);
+    }
   }
 }
