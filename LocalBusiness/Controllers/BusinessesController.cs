@@ -21,7 +21,7 @@ namespace LocalBusiness.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string county, string type, string category, int price, int rating, string sortBy_asc, string sortBy_dsc)
+    public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string county, string type, string category, int price, int rating, string sortBy_asc, string sortBy_dsc, string sortBy_most)
     {
       var query = _db.Businesses.AsQueryable();
       
@@ -29,32 +29,26 @@ namespace LocalBusiness.Controllers
       {
         query = query.Where(entry => entry.Name == name);
       }
-
       if ( city != null)
       {
         query = query.Where(entry => entry.City == city);
       }
-
       if (county != null)
       {
         query = query.Where(entry => entry.County == county);
       }
-
       if (type != null)
       {
         query = query.Where(entry => entry.Type == type);
       }
-
       if (category != null)
       {
         query = query.Where(entry => entry.Category == category);
       }
-
       if (price != 0)
       {
         query = query.Where(entry => entry.Price == price);
       }
-
       if (rating != 0 )
       {
         query = query.Where(entry => entry.Rating == rating);
@@ -130,6 +124,16 @@ namespace LocalBusiness.Controllers
         if (sortBy_dsc == "rating")
         {
           query = query.OrderByDescending(entry => entry.Rating);
+        }
+      }
+
+      if (sortBy_most != null)
+      {
+        var queryList = query.ToList();
+        if (sortBy_most == "city")
+        {
+          List<string> test = (query.GroupBy(find => find.City).OrderByDescending(g => g.Count()).Take(5).Select(g => g.Key).ToList());
+          query = test.AsQueryable();
         }
       }
       
