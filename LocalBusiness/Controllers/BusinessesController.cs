@@ -24,6 +24,7 @@ namespace LocalBusiness.Controllers
     public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string county, string type, string category, int price, int rating, string sortBy_asc, string sortBy_dsc, string sortBy_most)
     {
       var query = _db.Businesses.AsQueryable();
+      var queryTwo = _db.Businesses;
       
       if (name != null)
       {
@@ -127,15 +128,22 @@ namespace LocalBusiness.Controllers
         }
       }
 
-      if (sortBy_most != null)
-      {
-        var queryList = query.ToList();
-        if (sortBy_most == "city")
-        {
-          List<string> test = (query.GroupBy(find => find.City).OrderByDescending(g => g.Count()).Take(5).Select(g => g.Key).ToList());
-          query = test.AsQueryable();
-        }
-      }
+
+      // ***WIP IN PROGRESS***
+      // if (sortBy_most != null)
+      // {
+      //   var queryList = query.ToList();
+      //   if (sortBy_most == "city")
+      //   {
+      //     var test = query.GroupBy(find => find.City).OrderByDescending(g => g.Count()).Take(5).Select(g => g.Key).ToList();
+      //     List<Business> testMe = test.Cast<Business>().ToList();
+      //     foreach (string element in test)
+      //     {
+      //       Business testing = element;
+      //     }
+      //     query = testMe;
+      //   }
+      // }
       
       return await query.ToListAsync();
     }
