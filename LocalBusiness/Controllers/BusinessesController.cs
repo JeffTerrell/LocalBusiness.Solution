@@ -26,7 +26,7 @@ namespace LocalBusiness.Controllers
       return await _db.Businesses.ToListAsync();
     }
 
-    [HttpGet]
+    [HttpGet("{id}")]
     public async Task<ActionResult<Business>> GetBusiness(int id)
     {
       var business = await _db.Businesses.FindAsync(id);
