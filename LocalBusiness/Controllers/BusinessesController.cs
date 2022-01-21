@@ -21,7 +21,7 @@ namespace LocalBusiness.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string type, string category, int price, int rating)
+    public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string county, string type, string category, int price, int rating, string sortBy_asc, string sortBy_dsc)
     {
       var query = _db.Businesses.AsQueryable();
       
@@ -33,6 +33,11 @@ namespace LocalBusiness.Controllers
       if ( city != null)
       {
         query = query.Where(entry => entry.City == city);
+      }
+
+      if (county != null)
+      {
+        query = query.Where(entry => entry.County == county);
       }
 
       if (type != null)
@@ -53,6 +58,79 @@ namespace LocalBusiness.Controllers
       if (rating != 0 )
       {
         query = query.Where(entry => entry.Rating == rating);
+      }
+
+      if (sortBy_asc != null)
+      {
+        if (sortBy_asc == "name")
+        {
+          query = query.OrderBy(entry => entry.Name);
+        }  
+        if (sortBy_asc == "city")
+        {
+          query = query.OrderBy(entry => entry.City);
+        }
+        if (sortBy_asc == "county")
+        {
+          query = query.OrderBy(entry => entry.City);
+        }
+        if (sortBy_asc == "type")
+        {
+          query = query.OrderBy(entry => entry.Type);
+        }
+        if (sortBy_asc == "category")
+        {
+          query = query.OrderBy(entry => entry.Category);
+        }
+        if (sortBy_asc == "county")
+        {
+          query = query.OrderBy(entry => entry.County);
+        }
+        if (sortBy_asc == "price")
+        {
+          query = query.OrderBy(entry => entry.Price);
+        }
+        if (sortBy_asc == "rating")
+        {
+          query = query.OrderBy(entry => entry.Rating);
+        }
+      }
+
+
+      if (sortBy_dsc != null)
+      {
+        if (sortBy_dsc == "name")
+        {
+          query = query.OrderByDescending(entry => entry.Name);
+        }
+        if (sortBy_dsc == "city")
+        {
+          query = query.OrderByDescending(entry => entry.City);
+        }
+        if (sortBy_dsc == "county")
+        {
+          query = query.OrderByDescending(entry => entry.City);
+        }
+        if (sortBy_dsc == "type")
+        {
+          query = query.OrderByDescending(entry => entry.Type);
+        }
+        if (sortBy_dsc == "category")
+        {
+          query = query.OrderBy(entry => entry.Category);
+        }
+        if (sortBy_dsc == "county")
+        {
+          query = query.OrderByDescending(entry => entry.County);
+        }
+        if (sortBy_dsc == "price")
+        {
+          query = query.OrderByDescending(entry => entry.Price);
+        }
+        if (sortBy_dsc == "rating")
+        {
+          query = query.OrderByDescending(entry => entry.Rating);
+        }
       }
       
       return await query.ToListAsync();
