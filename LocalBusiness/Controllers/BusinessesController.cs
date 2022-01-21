@@ -21,9 +21,41 @@ namespace LocalBusiness.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Business>>> Get()
+    public async Task<ActionResult<IEnumerable<Business>>> Get(string name, string city, string type, string category, int price, int rating)
     {
-      return await _db.Businesses.ToListAsync();
+      var query = _db.Businesses.AsQueryable();
+      
+      if (name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+
+      if ( city != null)
+      {
+        query = query.Where(entry => entry.City == city);
+      }
+
+      if (type != null)
+      {
+        query = query.Where(entry => entry.Type == type);
+      }
+
+      if (category != null)
+      {
+        query = query.Where(entry => entry.Category == category);
+      }
+
+      if (price != 0)
+      {
+        query = query.Where(entry => entry.Price == price);
+      }
+
+      if (rating != 0 )
+      {
+        query = query.Where(entry => entry.Rating == rating);
+      }
+      
+      return await query.ToListAsync();
     }
 
     [HttpGet("{id}")]
