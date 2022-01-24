@@ -15,7 +15,7 @@
     - [Known Bugs](#known-bugs)
 - [Instructions](#instructions)
     - [Prerequisites](#prerequisites)
-    - [Setup & Installation](#setup-&-installation)
+    - [Setup and Installation](#setup-and-installation)
     - [Database Setup](#database-setup)
     - [Run the API](#run-the-api)
 - [API Documentation](#api-documentation)
@@ -69,7 +69,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### 📁Setup & Installation
+### 📁Setup and Installation
 * From a terminal, navigate to a directory of your choosing and use the "Git clone" command to copy the repository from this address (https://github.com/JeffTerrell/LocalBusiness.Solution).
 * Navigate to the sub directory "LocalBusiness" of the cloned main directory on your local machine.
 * From the same directory "LocalBusiness", enter the following command:
