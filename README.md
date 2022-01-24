@@ -113,7 +113,7 @@ After completing the Setup/Installation requirements follow these steps to creat
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-# 📗API Documentation
+## 📗API Documentation
 API can be explored from either Postman or a browser.
 
 ### Swagger
