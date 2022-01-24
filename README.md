@@ -105,7 +105,7 @@ After completing the Setup/Installation requirements follow these steps to creat
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### 🗄️Run the API 
+### 🚀Run the API 
   * From a terminal, navigate to the sub directory "LocalBusiness".
   * Enter the following command, "dotnet restore" to create necessary folders and files.
   * Next enter the following command, "dotnet run". This will launch the application in your terminal. Enter "Ctrl c" to exit the application at any point.
