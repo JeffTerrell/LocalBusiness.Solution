@@ -15,7 +15,7 @@
     - [Known Bugs](#known-bugs)
 - [Instructions](#instructions)
     - [Prerequisites](#prerequisites)
-    - [Setup & Installation Requirements](#setup-&-installation-requirements)
+    - [Setup & Installation](#setup-&-installation)
     - [Database Setup](#database-setup)
     - [Run the API](#run-the-api)
 - [API Documentation](#api-documentation)
@@ -42,7 +42,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-## 📘 Instructions
+## 📘Instructions
 
 
 ### 📝Prerequisites
@@ -69,7 +69,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### ⚙️Setup/Installation Requirements
+### ⚙️Setup & Installation
 * From a terminal, navigate to a directory of your choosing and use the "Git clone" command to copy the repository from this address (https://github.com/JeffTerrell/LocalBusiness.Solution).
 * Navigate to the sub directory "LocalBusiness" of the cloned main directory on your local machine.
 * From the same directory "LocalBusiness", enter the following command:
@@ -96,7 +96,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### 💾Database Setup/Installation Requirements 
+### 💾Database Setup 
 After completing the Setup/Installation requirements follow these steps to create the database schema in MySQL Workbench:
 * From a terminal in the sub directory "LocalBusiness", enter the following command to build the database:
   - _dotnet ef database update_
