@@ -10,17 +10,17 @@
 
 ## Table of Contents
 - [About the Project](#about-the-project)
-    - <a href="#📜-description">Description</a>
+    - [Description]](#description)
+    - [Technologies Used](#technologies-used)
     - [Known Bugs](#known-bugs)
-    - <a href="#🧰-built-with">Built With</a>
 - <a href="#📘-instructions">Instructions</a>
-    - <a href="#📝-prerequisites">Prerequisites</a>
-    - <a href="#⚙️-setup-and-use">Setup/Installation Requirments</a>
-    - <a href="#💾-setup-and-use">Database Setup/Installation Requirements </a>
-    - <a href="#🗄️-setup-and-use">Run the API</a>
-- <a href="#📗-api-documentation">API Documentation</a>
-- <a href="#📪-contact-and-support">Contact</a>
-- <a href="#💳-license">License</a>
+    - [Prequisites](#prerequisites)
+    - [Setup/Installation Requirments](#setup/installation-requirements)
+    - [Database Setup/Installation Requirements](#database-setup/installation-requirements)
+    - [Run the API](#run-the-api)
+- [API Documentation](#api-documentation)
+- [Contact](#contact)
+- [License](#license)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
