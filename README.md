@@ -14,8 +14,8 @@
     - [Technologies Used](#technologies-used)
     - [Known Bugs](#known-bugs)
 - [Instructions](#instructions)
-    - [Prequisites](#prerequisites)
-    - [Setup/Installation Requirments](#setup/installation-requirements)
+    - [Prerequisites](#prerequisites)
+    - [Setup/Installation Requirements](#setup/installation-requirements)
     - [Database Setup/Installation Requirements](#database-setup/installation-requirements)
     - [Run the API](#run-the-api)
 - [API Documentation](#api-documentation)
@@ -45,7 +45,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 ## 📘 Instructions
 
 
-### 📝Prequisites
+### 📝Prerequisites
 
 #### Install .NET Core
 * For macOS users (Mojave or newer):
