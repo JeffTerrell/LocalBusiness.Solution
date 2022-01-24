@@ -10,10 +10,10 @@
 
 ## Table of Contents
 - [About the Project](#about-the-project)
-    - [Description]](#description)
+    - [Description](#description)
     - [Technologies Used](#technologies-used)
     - [Known Bugs](#known-bugs)
-- <a href="#📘-instructions">Instructions</a>
+- [Instructions](#instructions)
     - [Prequisites](#prerequisites)
     - [Setup/Installation Requirments](#setup/installation-requirements)
     - [Database Setup/Installation Requirements](#database-setup/installation-requirements)
