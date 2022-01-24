@@ -33,9 +33,12 @@ A web API that allows a user to request data pertaining to local restaurants and
 * C#
 * .Net5
 * ASP.Net Core MVC
+* ASP.Net Web API
 * Entity Framework Core
 * MySql and MySql Workbench
 * LINQ
+* Swashbuckle AspNetCore 6.2.3
+* Postman
 
 ### 🐞Known Bugs
 * None 
