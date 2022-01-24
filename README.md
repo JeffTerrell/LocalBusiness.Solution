@@ -9,7 +9,7 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## Table of Contents
-* <a href="#📺-about-the-project">About the Project</a>
+* [About the Project](#about-the-project)
     * <a href="#📜-description">Description</a>
     * <a href="#🐞-known-bugs">Known Bugs</a>
     * <a href="#🧰-built-with">Built With</a>
