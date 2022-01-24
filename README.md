@@ -11,9 +11,9 @@
 ## Table of Contents
 * [About the Project](#about-the-project)
     * <a href="#📜-description">Description</a>
-    * <a href="#🐞-known-bugs">Known Bugs</a>
+    - [Known Bugs](#known-bugs)
     * <a href="#🧰-built-with">Built With</a>
-* <a href="#📘-getting-started">Getting Started</a>
+* <a href="#📘-instructions">Instructions</a>
     * <a href="#📝-prerequisites">Prerequisites</a>
     * <a href="#⚙️-setup-and-use">Setup/Installation Requirments</a>
     * <a href="#💾-setup-and-use">Database Setup/Installation Requirements </a>
