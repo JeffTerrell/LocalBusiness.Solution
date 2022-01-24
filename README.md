@@ -24,7 +24,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-## 📺 About the Project
+## 📺About the Project
 
 ### 📜Description
 A web API that allows a user to request data pertaining to local restaurants and shops. Users can specify the desired information through the use of filters and sorts. Users are also allowed to POST new businesses and UPDATE or DELETE existing businesses.
@@ -69,7 +69,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### ⚙️Setup & Installation
+### 📁Setup & Installation
 * From a terminal, navigate to a directory of your choosing and use the "Git clone" command to copy the repository from this address (https://github.com/JeffTerrell/LocalBusiness.Solution).
 * Navigate to the sub directory "LocalBusiness" of the cloned main directory on your local machine.
 * From the same directory "LocalBusiness", enter the following command:
