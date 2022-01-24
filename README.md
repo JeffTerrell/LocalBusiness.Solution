@@ -9,25 +9,24 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 ## Table of Contents
-* <a href="#🌐-about-the-project">About the Project</a>
-    * <a href="#🖊️-description">Description</a>
+* <a href="#📺-about-the-project">About the Project</a>
+    * <a href="#📜-description">Description</a>
     * <a href="#🐞-known-bugs">Known Bugs</a>
     * <a href="#🧰-built-with">Built With</a>
 * <a href="#📘-getting-started">Getting Started</a>
-    * <a href="#✔️-prerequisites">Prerequisites</a>
-    * <a href="#⚙️-setup-and-use">Setup and Use</a>
-* <a href="#🛰️-api-documentation">API Documentation</a>
-* <a href="#🤝-contributors">Auxiliary</a>
-    * <a href="#🤝-contributors">Contributors</a>
-    * <a href="#✉️-contact-and-support">Contact</a>
-    * <a href="#⚖️-license">License</a>
-    * <a href="#🌟-acknowledgements">Acknowledgements</a>
+    * <a href="#📝-prerequisites">Prerequisites</a>
+    * <a href="#⚙️-setup-and-use">Setup/Installation Requirments</a>
+    * <a href="#💾-setup-and-use">Database Setup/Installation Requirements </a>
+    * <a href="#🗄️-setup-and-use">Run the API</a>
+* <a href="#📗-api-documentation">API Documentation</a>
+* <a href="#📪-contact-and-support">Contact</a>
+* <a href="#💳-license">License</a>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-## 🌐 About the Project
+## 📺 About the Project
 
-### 🖊️Description
+### 📜Description
 A web API that allows a user to request data pertaining to local restaurants and shops. Users can specify the desired information through the use of filters and sorts. Users are also allowed to POST new businesses and UPDATE or DELETE existing businesses.
 
 ### 🧰Technologies Used
@@ -46,7 +45,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 ## 📘 Instructions
 
 
-### ✔️Prequisites
+### 📝Prequisites
 
 #### Install .NET Core
 * For macOS users (Mojave or newer):
@@ -70,7 +69,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### Setup/Installation Requirements
+### ⚙️Setup/Installation Requirements
 * From a terminal, navigate to a directory of your choosing and use the "Git clone" command to copy the repository from this address (https://github.com/JeffTerrell/LocalBusiness.Solution).
 * Navigate to the sub directory "LocalBusiness" of the cloned main directory on your local machine.
 * From the same directory "LocalBusiness", enter the following command:
@@ -97,7 +96,7 @@ A web API that allows a user to request data pertaining to local restaurants and
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### Database Setup/Installation Requirements 
+### 💾Database Setup/Installation Requirements 
 After completing the Setup/Installation requirements follow these steps to create the database schema in MySQL Workbench:
 * From a terminal in the sub directory "LocalBusiness", enter the following command to build the database:
   - _dotnet ef database update_
@@ -106,7 +105,7 @@ After completing the Setup/Installation requirements follow these steps to creat
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 
-### Run the API 
+### 🗄️Run the API 
   * From a terminal, navigate to the sub directory "LocalBusiness".
   * Enter the following command, "dotnet restore" to create necessary folders and files.
   * Next enter the following command, "dotnet run". This will launch the application in your terminal. Enter "Ctrl c" to exit the application at any point.
@@ -114,19 +113,70 @@ After completing the Setup/Installation requirements follow these steps to creat
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-# API Documentation
+# 📗API Documentation
+API can be explored from either Postman or a browser.
+
+### Swagger
+Enter "dotnet run" from the project directory "LocalBusiness. From a browser enter http://localhost:5000/index.html
+
+### Endpoints
+Base  URL: http://localhost:5000
+
+#### HTTP Request Structure
+```
+GET /api/businesses
+POST /api/businesses
+GET /api/businesses/{id}
+PUT /api/businesses/{id}
+DELETE /api/businesses/{id}
+```
+#### Path Parameters
+| Parameter | Type | Default | Required | Description |
+| :---: | :---: | :---: | :---: | --- |
+| name | string | none | false | Return matches by business name.
+| city | string | none | false | Return any business from a specific city. |
+| county | string | none | false | Return any business from a specific county. |
+| type | string | none | false | Return business matches by type, either restaurant or shop.
+| category | string | none | false | Return any business based on it's category (ex: breakfast or hats). |
+| price | int | none | false | Return business matches based on pricing level (1-5). |
+| rating | int | none | false | Return business matches based on user rating (1-5). |
+
+#### Example Queries
+```
+http://localhost:5000/api/businesses
+http://localhost:5000/api/businesses?name=threedollarcafe
+http://localhost:5000/api/businesses?type=restaurant&rating=5
+```
+
+#### Example JSON Response
+```
+    {
+        "businessId": 3,
+        "name": "Character's Famous BBQ",
+        "streetAddress": "6419 Joe Frank Harris Pkwy",
+        "city": "Adairsville",
+        "state": "GA",
+        "county": "Bartow",
+        "type": "Restaurant",
+        "category": "BBQ",
+        "price": 2,
+        "review": "Excellent BBQ in a small town, featured on BBQ Pit Wars and BBQ Pitmasters",
+        "rating": 5
+    }
+```    
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
 
-## License
-
-[MIT](https://opensource.org/licenses/MIT)
-
+## 📪Contact
 Please contact Jeff Terrell via email with any issues, questions, or ideas.
 <br>
 [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JeffTerrell)
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeffaterrell)
-<br>
+
+## 💳License
+
+[MIT](https://opensource.org/licenses/MIT)
+
 <br>
 Copyright (c) 2021 Jeff Terrell
